@@ -38,6 +38,9 @@ object Versions {
     const val retrofit = "2.9.0"
     const val loggingInterceptor = "4.9.0"
 
+    //Glide
+    const val glide =  "4.11.0"
+
     //Version codes for all the test libraries
     const val junit4 = "4.13.1"
     const val testRunner = "1.3.1-alpha03"
@@ -119,6 +122,10 @@ object Libraries {
 
     //Coil
     const val coil = "io.coil-kt:coil:${Versions.coil}"
+
+    //Glide
+    const val glide = "com.github.bumptech.glide:glide:${Versions.glide}"
+    const val glideKapt = "com.github.bumptech.glide:compiler:${Versions.glide}"
 }
 
 object TestLibraries {

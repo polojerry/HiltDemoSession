@@ -18,6 +18,7 @@ import javax.inject.Singleton
 object NetworkModule {
 
     @Provides
+    @Singleton
     fun provideOkHttpClient(): OkHttpClient {
         val interceptor = HttpLoggingInterceptor().apply {
             level = when (BuildConfig.BUILD_TYPE) {
@@ -33,6 +34,7 @@ object NetworkModule {
     }
 
     @Provides
+    @Singleton
     fun providesRetrofit(okHttpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder()
             .baseUrl(BASE_URL)

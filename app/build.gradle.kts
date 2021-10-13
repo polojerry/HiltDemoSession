@@ -2,6 +2,7 @@ plugins {
     id("com.android.application")
     id("kotlin-android")
     id("kotlin-kapt")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -32,11 +33,11 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 
-    tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
-        kotlinOptions {
-            jvmTarget = "1.8"
-        }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
     }
+
 
     buildFeatures {
         dataBinding = true
@@ -45,6 +46,9 @@ android {
 
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
+
+    implementation(project(BuildModules.domainModule))
+    implementation(project(BuildModules.networkModule))
 
     //Kotlin
     implementation(Libraries.kotlinStandardLibrary)
@@ -59,6 +63,28 @@ dependencies {
 
     //Logging: Timber
     implementation(Libraries.timber)
+
+    //Hilt
+    implementation(Libraries.hilt)
+    kapt(Libraries.hiltKapt)
+
+    //Coil
+    implementation(Libraries.coil)
+
+    //Lifecycle
+    implementation(Libraries.liveDataKtx)
+    implementation(Libraries.viewModelKtx)
+
+    //Navigation
+    implementation(Libraries.navigationUiKtx)
+    implementation(Libraries.navigationFragmentKtx)
+
+    //Glide
+    implementation(Libraries.glide)
+    implementation("com.github.bumptech.glide:okhttp3-integration:4.4.0"){
+      exclude("glide-parent")
+    }
+    kapt(Libraries.glideKapt)
 
     //Test
     testImplementation(TestLibraries.junit4)

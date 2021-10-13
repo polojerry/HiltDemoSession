@@ -2,6 +2,7 @@ plugins {
     id("com.android.library")
     id("kotlin-android")
     id("kotlin-kapt")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -42,9 +43,9 @@ dependencies {
     implementation(Libraries.coroutinesCore)
 
     //Retrofit
-    implementation(Libraries.retrofit)
-    implementation(Libraries.gson)
-    implementation(Libraries.loggingInterceptor)
+    api(Libraries.retrofit)
+    api(Libraries.gson)
+    api(Libraries.loggingInterceptor)
 
     //Hilt
     implementation(Libraries.hilt)

@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 
 
 data class NewsNetwork(
-    val author: String,
+    val author: String?,
     val title: String,
 
     @SerializedName("urlToImage")

@@ -7,7 +7,7 @@ import com.samples.network.models.SourceNetwork
 
 fun NewsNetwork.toDomain(): News {
     return News(
-        author,
+        author ?: "Unknown",
         title,
         imageUrl,
         publishDate,
