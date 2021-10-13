@@ -10,3 +10,4 @@ dependencyResolutionManagement {
 rootProject.name = "HiltDemoSession"
 include (":app")
 include(":domain")
+include(":data:network")

@@ -5,11 +5,11 @@ import com.samples.domain.models.Resource
 import com.samples.domain.repository.NewsRepository
 import kotlinx.coroutines.flow.Flow
 
-typealias FetchHeadlinesBaseUseCase = BaseUseCase<Unit, Resource<Flow<List<News>>>>
+typealias FetchHeadlinesBaseUseCase = BaseUseCase<Unit,  Flow<Resource<List<News>>>>
 
 class FetchHeadlinesUseCase constructor(private val newsRepository: NewsRepository) :
     FetchHeadlinesBaseUseCase {
-    override suspend fun invoke(params: Unit): Resource<Flow<List<News>>> {
+    override suspend fun invoke(params: Unit): Flow<Resource<List<News>>> {
         return newsRepository.fetchTopHeadlines()
     }
 }

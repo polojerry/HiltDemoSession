@@ -1,0 +1,58 @@
+{
+  "status": "ok",
+  "totalResults": 2809,
+  "articles": [
+    {
+      "source": {
+        "id": "engadget",
+        "name": "Engadget"
+      },
+      "author": "Kris Holt",
+      "title": "Microsoft Edge update adds tab groups and new shopping features",
+      "description": "Just ahead of the Windows 11 launch\r\n, Microsoft is rolling out\r\n some updates to Edge\r\n. Perhaps the most useful feature for most people is the addition of tab groups. You'll be able to assemble collections of tabs to make your browser a little less chaotic.…",
+      "url": "https://www.engadget.com/microsoft-edge-tab-groups-shopping-features-travel-news-185421812.html",
+      "urlToImage": "https://s.yimg.com/os/creatr-uploaded-images/2021-09/26a74670-1c9e-11ec-ab3f-01e751891c2b",
+      "publishedAt": "2021-09-23T18:54:21Z",
+      "content": "Just ahead of the Windows 11 launch\r\n, Microsoft is rolling out\r\n some updates to Edge\r\n. Perhaps the most useful feature for most people is the addition of tab groups. You'll be able to assemble col… [+2187 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Yahoo Entertainment"
+      },
+      "author": "CBS News Videos",
+      "title": "\"CBS Evening News\" headlines for Monday, September 20, 2021",
+      "description": "Here's a look at the top stories making headlines on the \"CBS Evening News with Norah O'Donnell.\"",
+      "url": "https://news.yahoo.com/cbs-evening-news-headlines-monday-230403005.html",
+      "urlToImage": "https://s.yimg.com/hd/cp-video-transcode/prod/2021-09/20/6149166b05530c31008eeed6/6149166b05530c31008eeed7_o_U_v2.jpg",
+      "publishedAt": "2021-09-20T23:04:03Z",
+      "content": "Michael M Santiago/GettyImagesProsecutors have discovered a tranche of evidence in the basement of a co-conspirator in the Trump Organization tax fraud case, a defense lawyer for indicted chief finan… [+296 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Yahoo Entertainment"
+      },
+      "author": "CBS News Videos",
+      "title": "\"CBS Evening News\" headlines for Wednesday, September 15, 2021",
+      "description": "Here's a look at the top stories making headlines on the \"CBS Evening News with Norah O'Donnell.\"",
+      "url": "https://news.yahoo.com/cbs-evening-news-headlines-wednesday-224741623.html",
+      "urlToImage": "https://s.yimg.com/hd/cp-video-transcode/prod/2021-09/15/61427bb933777a72b6048b75/61427bb933777a72b6048b76_o_U_v2.jpg",
+      "publishedAt": "2021-09-15T22:47:41Z",
+      "content": "YouTubeA young woman who mysteriously vanished while road tripping across the U.S. with her fiancé got into a physical altercation with him two weeks before he returned to Florida without her, accord… [+299 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Yahoo Entertainment"
+      },
+      "author": "CBS News Videos",
+      "title": "\"CBS Evening News\" headlines for Tuesday, September 28, 2021",
+      "description": "Here's a look at the top stories making headlines on the \"CBS Evening News with Norah O'Donnell.\"",
+      "url": "https://news.yahoo.com/cbs-evening-news-headlines-tuesday-225034929.html",
+      "urlToImage": "https://s.yimg.com/hd/cp-video-transcode/prod/2021-09/28/6153a389d024e653656d3cf1/6153a389d024e653656d3cf2_o_U_v2.jpg",
+      "publishedAt": "2021-09-28T22:50:34Z",
+      "content": "It was a big night out for the royal family as Prince Charles, Camilla, Duchess of Cornwall, Prince William and Kate Middleton stepped out for the premiere of the James Bond film, No Time To Die. Whi… [+113 chars]"
+    }
+  ]
+}

@@ -6,5 +6,5 @@ import kotlinx.coroutines.flow.Flow
 
 interface NewsRepository {
 
-    fun fetchTopHeadlines() : Resource<Flow<List<News>>>
+    fun fetchTopHeadlines() : Flow<Resource<List<News>>>
 }

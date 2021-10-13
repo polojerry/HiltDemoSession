@@ -114,7 +114,7 @@ object Libraries {
 
     //Retrofit
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
-    const val moshi = "com.squareup.retrofit2:converter-moshi:${Versions.retrofit}"
+    const val gson = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
     const val loggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.loggingInterceptor}"
 
     //Coil
@@ -144,4 +144,9 @@ object AndroidSdk {
     const val targetSdkVersion = compileSdkVersion
     const val versionCode = 1
     const val versionName = "1.0"
+}
+
+object BuildModules {
+    const val domainModule = ":domain"
+    const val networkModule = ":data:network"
 }
