@@ -20,7 +20,7 @@ class NewsRepositoryImpl @Inject constructor(private val newsApi: NewsApi) : New
                     emit(
                         Resource.Success(data = response.body()!!.articles.map {
                             it.toDomain()
-                        })
+                        }.shuffled())
                     )
                 }
                 else -> {

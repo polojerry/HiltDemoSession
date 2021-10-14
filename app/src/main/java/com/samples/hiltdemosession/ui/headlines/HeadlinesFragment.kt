@@ -70,6 +70,6 @@ class HeadlinesFragment : Fragment() {
 
     private fun displayErrorState(message: String) {
         binding.progressHeadlines.isVisible = false
-        Snackbar.make(binding.root, "$message", Snackbar.LENGTH_SHORT).show()
+        Snackbar.make(binding.root, message, Snackbar.LENGTH_SHORT).show()
     }
 }
