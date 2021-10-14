@@ -9,5 +9,18 @@
         android:id="@+id/bottomNavigationFragment"
         android:name="com.samples.hiltdemosession.ui.bottomNavigation.BottomNavigationFragment"
         android:label="bottom_navigation_fragment"
-        tools:layout="@layout/bottom_navigation_fragment" />
+        tools:layout="@layout/bottom_navigation_fragment" >
+        <action
+            android:id="@+id/action_bottomNavigationFragment_to_newsDetailsFragment"
+            app:destination="@id/newsDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsDetailsFragment"
+        android:name="com.samples.hiltdemosession.ui.newsDetails.NewsDetailsFragment"
+        android:label="NewsDetailsFragment"
+        tools:layout="@layout/news_details_fragment">
+        <argument
+            android:name="news"
+            app:argType="com.samples.hiltdemosession.models.NewsPresenter" />
+    </fragment>
 </navigation>

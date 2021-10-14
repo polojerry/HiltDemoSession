@@ -6,4 +6,13 @@
         <item name="labelVisibilityMode">labeled</item>
     </style>
 
+    <style name="Widget.HiltDemoSession.DropCap" parent="">
+        <item name="dropCapTextSize">64sp</item>
+        <item name="numberOfDropCaps">1</item>
+        <item name="dropCapFontPath">font/libre_franklin.xml</item>
+        <item name="copyTextSize">20sp</item>
+        <item name="lineSpacingExtra">0sp</item>
+        <item name="android:lineSpacingMultiplier">1.5</item>
+    </style>
+
 </resources>

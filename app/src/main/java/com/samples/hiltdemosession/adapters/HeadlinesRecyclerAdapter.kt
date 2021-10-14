@@ -1,4 +1,4 @@
-package com.samples.hiltdemosession.ui.headlines
+package com.samples.hiltdemosession.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -8,10 +8,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.samples.hiltdemosession.databinding.ItemNewsBinding
 import com.samples.hiltdemosession.databinding.ItemNewsHeaderBinding
 import com.samples.hiltdemosession.models.NewsPresenter
-import com.samples.hiltdemosession.ui.headlines.HeadlinesRecyclerAdapter.HeadlinesHeaderViewHolder.Companion.createHeader
-import com.samples.hiltdemosession.ui.headlines.HeadlinesRecyclerAdapter.NewsViewHolder.Companion.create
+import com.samples.hiltdemosession.adapters.HeadlinesRecyclerAdapter.HeadlinesHeaderViewHolder.Companion.createHeader
+import com.samples.hiltdemosession.adapters.HeadlinesRecyclerAdapter.NewsViewHolder.Companion.create
 
-class HeadlinesRecyclerAdapter :
+class HeadlinesRecyclerAdapter (private val onClickListener: OnClickListener):
     ListAdapter<NewsPresenter, RecyclerView.ViewHolder>(HeadlinesComparator()) {
 
     class HeadlinesComparator : DiffUtil.ItemCallback<NewsPresenter>() {
@@ -42,20 +42,23 @@ class HeadlinesRecyclerAdapter :
         when (holder) {
             is NewsViewHolder -> {
                 val newsItem = getItem(position)
-                holder.bind(newsItem)
+                holder.bind(newsItem, onClickListener)
             }
 
             is HeadlinesHeaderViewHolder -> {
                 val newsItem = getItem(position)
-                holder.bind(newsItem)
+                holder.bind(newsItem, onClickListener)
             }
         }
     }
 
     class NewsViewHolder(private val binding: ItemNewsBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(newsItem: NewsPresenter?) {
+        fun bind(newsItem: NewsPresenter, onClickListener: OnClickListener) {
             binding.news = newsItem
+            binding.root.setOnClickListener {
+                onClickListener.onClick(newsItem)
+            }
             binding.executePendingBindings()
         }
 
@@ -71,8 +74,11 @@ class HeadlinesRecyclerAdapter :
 
     class HeadlinesHeaderViewHolder(private val binding: ItemNewsHeaderBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(newsItem: NewsPresenter?) {
+        fun bind(newsItem: NewsPresenter, onClickListener: OnClickListener) {
             binding.news = newsItem
+            binding.root.setOnClickListener {
+                onClickListener.onClick(newsItem)
+            }
             binding.executePendingBindings()
         }
 
@@ -96,6 +102,10 @@ class HeadlinesRecyclerAdapter :
     companion object {
         private val HEADER_ITEM = 0
         private val NORMAL_ITEM = 1
+    }
+
+    class OnClickListener(val onClickListener: (news: NewsPresenter) -> Unit) {
+        fun onClick(news: NewsPresenter) = onClickListener(news)
     }
 
 

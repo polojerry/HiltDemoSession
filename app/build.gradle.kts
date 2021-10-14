@@ -2,7 +2,9 @@ plugins {
     id("com.android.application")
     id("kotlin-android")
     id("kotlin-kapt")
+    id("kotlin-parcelize")
     id("dagger.hilt.android.plugin")
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 android {
@@ -66,6 +68,9 @@ dependencies {
 
     //Hilt
     implementation(Libraries.hilt)
+    implementation("androidx.legacy:legacy-support-v4:1.0.0")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.3.1")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1")
     kapt(Libraries.hiltKapt)
 
     //Coil
@@ -85,6 +90,9 @@ dependencies {
       exclude("glide-parent")
     }
     kapt(Libraries.glideKapt)
+
+    //DropCap
+    implementation(Libraries.dropCap)
 
     //Test
     testImplementation(TestLibraries.junit4)

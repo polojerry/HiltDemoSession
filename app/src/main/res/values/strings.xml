@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">HiltDemoSession</string>
+    <string name="favourite">Favourite</string>
+    <string name="format_author">
+        <font>By,</font>
+        <font fgcolor='#000000'>$s</font>
+    </string>
+    <string name="by">by</string>
 </resources>

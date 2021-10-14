@@ -8,9 +8,14 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.findNavController
 import com.google.android.material.snackbar.Snackbar
+import com.samples.hiltdemosession.R
+import com.samples.hiltdemosession.adapters.HeadlinesRecyclerAdapter
+import com.samples.hiltdemosession.adapters.HeadlinesRecyclerAdapter.OnClickListener
 import com.samples.hiltdemosession.databinding.HeadlinesFragmentBinding
 import com.samples.hiltdemosession.models.NewsPresenter
+import com.samples.hiltdemosession.ui.bottomNavigation.BottomNavigationFragmentDirections
 import com.samples.hiltdemosession.ui.headlines.HeadlinesViewModel.HeadlinesNewsState
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
@@ -35,9 +40,19 @@ class HeadlinesFragment : Fragment() {
     }
 
     private fun setUpDisplay() {
-        adapter = HeadlinesRecyclerAdapter()
+        adapter = HeadlinesRecyclerAdapter(OnClickListener { news ->
+            navigateToDetails(news)
+        })
         binding.recyclerHeadlines.adapter = adapter
 
+    }
+
+    private fun navigateToDetails(news: NewsPresenter) {
+        val action =
+            BottomNavigationFragmentDirections.actionBottomNavigationFragmentToNewsDetailsFragment(
+                news
+            )
+        requireActivity().findNavController(R.id.nav_host_fragment).navigate(action)
     }
 
     private fun setUpObservers() {

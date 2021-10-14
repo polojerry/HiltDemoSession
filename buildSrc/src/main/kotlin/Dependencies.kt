@@ -41,6 +41,9 @@ object Versions {
     //Glide
     const val glide =  "4.11.0"
 
+    //DropCap
+    const val dropCap = "1.1.0"
+
     //Version codes for all the test libraries
     const val junit4 = "4.13.1"
     const val testRunner = "1.3.1-alpha03"
@@ -126,6 +129,9 @@ object Libraries {
     //Glide
     const val glide = "com.github.bumptech.glide:glide:${Versions.glide}"
     const val glideKapt = "com.github.bumptech.glide:compiler:${Versions.glide}"
+
+    //DropCap
+    const val dropCap  = "com.novoda:drop-cap:${Versions.dropCap}"
 }
 
 object TestLibraries {
