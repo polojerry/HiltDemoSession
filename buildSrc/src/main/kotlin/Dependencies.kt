@@ -162,4 +162,5 @@ object AndroidSdk {
 
 object BuildModules {
     const val domainModule = ":domain"
+    const val localModule = ":data:local"
 }

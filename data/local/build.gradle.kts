@@ -1,22 +1,16 @@
 plugins {
-    id("com.android.application")
+    id("com.android.library")
     id("kotlin-android")
     id("kotlin-kapt")
-    id("kotlin-parcelize")
     id("dagger.hilt.android.plugin")
-    id("androidx.navigation.safeargs.kotlin")
 }
 
 android {
-    defaultConfig {
-        applicationId = "com.samples.hiltdemosession"
+    compileSdk = AndroidSdk.compileSdkVersion
 
-        compileSdk = AndroidSdk.compileSdkVersion
+    defaultConfig {
         minSdk = AndroidSdk.minSdkVersion
         targetSdk = AndroidSdk.targetSdkVersion
-
-        versionCode = AndroidSdk.versionCode
-        versionName = AndroidSdk.versionName
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -42,33 +36,19 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 
-
     kotlinOptions {
         jvmTarget = "1.8"
     }
 
-
-    buildFeatures {
-        dataBinding = true
-    }
 }
 
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
 
     implementation(project(BuildModules.domainModule))
-    implementation(project(BuildModules.localModule))
 
     //Kotlin
-    implementation(Libraries.kotlinStandardLibrary)
     implementation(Libraries.ktxCore)
-
-    //UI
-    implementation(Libraries.appCompat)
-    implementation(Libraries.materialComponents)
-    implementation(Libraries.constraintLayout)
-    implementation(Libraries.fragment)
-    implementation(Libraries.legacySupport)
 
     //Logging: Timber
     implementation(Libraries.timber)
@@ -77,45 +57,18 @@ dependencies {
     implementation(Libraries.hilt)
     kapt(Libraries.hiltKapt)
 
-    //Coil
-    implementation(Libraries.coil)
-
-    //Lifecycle
-    implementation(Libraries.viewModelKtx)
-    implementation(Libraries.lifecycleRuntime)
-
-    //Navigation
-    implementation(Libraries.navigationUiKtx)
-    implementation(Libraries.navigationFragmentKtx)
-
-    //Coroutine
-    implementation(Libraries.coroutinesCore)
-
-    //Retrofit
-    implementation(Libraries.retrofit)
-    implementation(Libraries.gson)
-    implementation(Libraries.loggingInterceptor)
-
     //Hilt
     implementation(Libraries.hilt)
     kapt(Libraries.hiltKapt)
 
-    //Glide
-    implementation(Libraries.glide)
-    implementation(Libraries.glideOkHttp){
-      exclude("glide-parent")
-    }
-    kapt(Libraries.glideKapt)
-
-    //DropCap
-    implementation(Libraries.dropCap)
+    //Room
+    implementation(Libraries.roomKtx)
+    implementation(Libraries.roomRuntime)
+    kapt(Libraries.roomKapt)
 
     //Test
     testImplementation(TestLibraries.junit4)
     testImplementation(TestLibraries.extJunit)
-    testImplementation(TestLibraries.mockWebServer)
     testImplementation(TestLibraries.truth)
-
-    //Android Test
-    androidTestImplementation(TestLibraries.espresso)
+    testImplementation(TestLibraries.roboelectric)
 }
