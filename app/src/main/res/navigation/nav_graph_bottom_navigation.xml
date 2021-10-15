@@ -10,4 +10,9 @@
         android:name="com.samples.hiltdemosession.feature_news.presentation.ui.headlines.HeadlinesFragment"
         android:label="HeadlinesFragment"
         tools:layout="@layout/headlines_fragment"/>
+    <fragment
+        android:id="@+id/favouritesFragment"
+        android:name="com.samples.hiltdemosession.feature_news_favourite.presentation.ui.favourites.FavouritesFragment"
+        android:label="FavouritesFragment"
+        tools:layout="@layout/favourites_fragment"/>
 </navigation>

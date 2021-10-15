@@ -62,8 +62,8 @@ dependencies {
     kapt(Libraries.hiltKapt)
 
     //Room
-    implementation(Libraries.roomKtx)
-    implementation(Libraries.roomRuntime)
+    api(Libraries.roomKtx)
+    api(Libraries.roomRuntime)
     kapt(Libraries.roomKapt)
 
     //Test
