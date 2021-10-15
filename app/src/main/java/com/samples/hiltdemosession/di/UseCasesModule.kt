@@ -1,7 +1,7 @@
 package com.samples.hiltdemosession.di
 
-import com.samples.hiltdemosession.feature_news.domain.repository.NewsRepository
-import com.samples.hiltdemosession.feature_news.domain.usecase.FetchHeadlinesUseCase
+import com.samples.domain.repository.NewsRepository
+import com.samples.domain.usecase.FetchHeadlinesUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

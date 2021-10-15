@@ -161,4 +161,5 @@ object AndroidSdk {
 }
 
 object BuildModules {
+    const val domainModule = ":domain"
 }

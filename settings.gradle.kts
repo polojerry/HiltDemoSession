@@ -9,3 +9,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "HiltDemoSession"
 include (":app")
+include(":features:favouritenews")
+include(":domain")

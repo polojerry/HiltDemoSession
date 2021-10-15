@@ -1,4 +1,4 @@
-package com.samples.hiltdemosession.util
+package com.samples.domain.model
 
 sealed class Resource<T>(
     val data: T? = null,

@@ -2,7 +2,7 @@ package com.samples.hiltdemosession.di
 
 import com.samples.hiltdemosession.feature_news.data.datasource.remote.api.NewsApi
 import com.samples.hiltdemosession.feature_news.data.repository.NewsRepositoryImpl
-import com.samples.hiltdemosession.feature_news.domain.repository.NewsRepository
+import com.samples.domain.repository.NewsRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

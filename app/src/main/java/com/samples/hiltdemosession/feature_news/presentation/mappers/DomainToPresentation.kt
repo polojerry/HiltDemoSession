@@ -1,7 +1,7 @@
 package com.samples.hiltdemosession.feature_news.presentation.mappers
 
-import com.samples.hiltdemosession.feature_news.domain.model.News
-import com.samples.hiltdemosession.feature_news.domain.model.Source
+import com.samples.domain.model.News
+import com.samples.domain.model.Source
 import com.samples.hiltdemosession.feature_news.presentation.models.NewsPresenter
 import com.samples.hiltdemosession.feature_news.presentation.models.SourcePresenter
 
