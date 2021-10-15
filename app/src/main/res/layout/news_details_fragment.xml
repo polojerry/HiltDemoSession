@@ -7,14 +7,14 @@
 
         <variable
             name="news"
-            type="com.samples.hiltdemosession.models.NewsPresenter" />
+            type="com.samples.hiltdemosession.feature_news.presentation.models.NewsPresenter" />
 
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.newsDetails.NewsDetailsFragment">
+        tools:context=".feature_news.presentation.ui.newsDetails.NewsDetailsFragment">
 
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/app_bar_headlines"

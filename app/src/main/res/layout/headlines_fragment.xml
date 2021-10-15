@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.headlines.HeadlinesFragment">
+        tools:context=".feature_news.presentation.ui.headlines.HeadlinesFragment">
 
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/app_bar_headlines"

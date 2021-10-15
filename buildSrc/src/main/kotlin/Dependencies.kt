@@ -14,7 +14,7 @@ object Versions {
 
     //AndroidX
     const val navigation = "2.3.5"
-    const val lifecycle = "2.4.0-alpha03"
+    const val lifecycle = "2.3.1"
 
     //Coroutines
     const val coroutines = "1.3.9"
@@ -40,6 +40,7 @@ object Versions {
 
     //Glide
     const val glide =  "4.11.0"
+    const val glideOkHttp = "4.4.0"
 
     //DropCap
     const val dropCap = "1.1.0"
@@ -129,6 +130,7 @@ object Libraries {
     //Glide
     const val glide = "com.github.bumptech.glide:glide:${Versions.glide}"
     const val glideKapt = "com.github.bumptech.glide:compiler:${Versions.glide}"
+    const val glideOkHttp = "com.github.bumptech.glide:okhttp3-integration:${Versions.glideOkHttp}"
 
     //DropCap
     const val dropCap  = "com.novoda:drop-cap:${Versions.dropCap}"
@@ -160,6 +162,4 @@ object AndroidSdk {
 }
 
 object BuildModules {
-    const val domainModule = ":domain"
-    const val networkModule = ":data:network"
 }

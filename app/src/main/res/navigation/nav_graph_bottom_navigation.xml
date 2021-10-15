@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/headlinesFragment"
-        android:name="com.samples.hiltdemosession.ui.headlines.HeadlinesFragment"
+        android:name="com.samples.hiltdemosession.feature_news.presentation.ui.headlines.HeadlinesFragment"
         android:label="HeadlinesFragment"
         tools:layout="@layout/headlines_fragment"/>
 </navigation>

@@ -7,7 +7,7 @@
 
         <variable
             name="news"
-            type="com.samples.hiltdemosession.models.NewsPresenter" />
+            type="com.samples.hiltdemosession.feature_news.presentation.models.NewsPresenter" />
 
     </data>
 

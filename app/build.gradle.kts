@@ -49,9 +49,6 @@ android {
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
 
-    implementation(project(BuildModules.domainModule))
-    implementation(project(BuildModules.networkModule))
-
     //Kotlin
     implementation(Libraries.kotlinStandardLibrary)
     implementation(Libraries.ktxCore)
@@ -68,9 +65,6 @@ dependencies {
 
     //Hilt
     implementation(Libraries.hilt)
-    implementation("androidx.legacy:legacy-support-v4:1.0.0")
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.3.1")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1")
     kapt(Libraries.hiltKapt)
 
     //Coil
@@ -84,9 +78,21 @@ dependencies {
     implementation(Libraries.navigationUiKtx)
     implementation(Libraries.navigationFragmentKtx)
 
+    //Coroutine
+    implementation(Libraries.coroutinesCore)
+
+    //Retrofit
+    implementation(Libraries.retrofit)
+    implementation(Libraries.gson)
+    implementation(Libraries.loggingInterceptor)
+
+    //Hilt
+    implementation(Libraries.hilt)
+    kapt(Libraries.hiltKapt)
+
     //Glide
     implementation(Libraries.glide)
-    implementation("com.github.bumptech.glide:okhttp3-integration:4.4.0"){
+    implementation(Libraries.glideOkHttp){
       exclude("glide-parent")
     }
     kapt(Libraries.glideKapt)
@@ -97,6 +103,8 @@ dependencies {
     //Test
     testImplementation(TestLibraries.junit4)
     testImplementation(TestLibraries.extJunit)
+    testImplementation(TestLibraries.mockWebServer)
+    testImplementation(TestLibraries.truth)
 
     //Android Test
     androidTestImplementation(TestLibraries.espresso)

@@ -14,7 +14,7 @@
         android:theme="@style/Theme.HiltDemoSession"
         android:name=".HiltDemoSession">
         <activity
-            android:name=".ui.MainActivity"
+            android:name="com.samples.hiltdemosession.feature_news.presentation.ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
