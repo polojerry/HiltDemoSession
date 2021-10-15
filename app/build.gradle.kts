@@ -29,6 +29,13 @@ android {
                 "proguard-rules.pro"
             )
         }
+        getByName("debug") {
+            isMinifyEnabled = false
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+        }
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -71,8 +78,8 @@ dependencies {
     implementation(Libraries.coil)
 
     //Lifecycle
-    implementation(Libraries.liveDataKtx)
     implementation(Libraries.viewModelKtx)
+    implementation(Libraries.lifecycleRuntime)
 
     //Navigation
     implementation(Libraries.navigationUiKtx)

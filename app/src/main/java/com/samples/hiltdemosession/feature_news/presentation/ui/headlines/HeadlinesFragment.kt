@@ -15,7 +15,7 @@ import com.samples.hiltdemosession.feature_news.presentation.adapters.HeadlinesR
 import com.samples.hiltdemosession.feature_news.presentation.adapters.HeadlinesRecyclerAdapter.OnClickListener
 import com.samples.hiltdemosession.databinding.HeadlinesFragmentBinding
 import com.samples.hiltdemosession.feature_news.presentation.models.NewsPresenter
-import com.samples.hiltdemosession.feature_news.presentation.ui.bottomNavigation.BottomNavigationFragmentDirections
+import com.samples.hiltdemosession.ui.bottomNavigation.BottomNavigationFragmentDirections
 import com.samples.hiltdemosession.feature_news.presentation.ui.headlines.HeadlinesViewModel.HeadlinesNewsState
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect

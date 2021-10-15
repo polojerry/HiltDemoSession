@@ -57,7 +57,7 @@
                 android:layout_marginStart="12dp"
                 android:layout_marginEnd="15dp"
                 android:scaleType="centerCrop"
-                app:image="@{news.imageUrl}"
+                android:imageUrl="@{news.imageUrl}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

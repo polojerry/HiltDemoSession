@@ -18,7 +18,6 @@ import javax.inject.Inject
 @HiltViewModel
 class HeadlinesViewModel @Inject constructor(
     private val fetchHeadlinesUseCase: FetchHeadlinesUseCase,
-    savedStateHandle: SavedStateHandle
 ) : ViewModel() {
 
     private val mutableHeadlineNewsState =

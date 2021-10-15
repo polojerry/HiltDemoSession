@@ -1,4 +1,4 @@
-package com.samples.hiltdemosession.feature_news.presentation.ui
+package com.samples.hiltdemosession.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

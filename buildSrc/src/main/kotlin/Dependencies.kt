@@ -14,7 +14,7 @@ object Versions {
 
     //AndroidX
     const val navigation = "2.3.5"
-    const val lifecycle = "2.3.1"
+    const val lifecycle = "2.4.0-alpha01"
 
     //Coroutines
     const val coroutines = "1.3.9"
@@ -97,7 +97,6 @@ object Libraries {
     const val coroutinesPlayServices = "org.jetbrains.kotlinx:kotlinx-coroutines-play-services:${Versions.coroutines}"
 
     //ViewModel, LiveData
-    const val liveDataKtx = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle}"
     const val viewModelKtx = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
     const val kaptLifecycle = "androidx.lifecycle:lifecycle-compiler:${Versions.lifecycle}"
     const val lifecycleRuntime = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycle}"
