@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_bottom_navigation.xml"
+    app:startDestination="@id/headlinesFragment">
+
+    <fragment
+        android:id="@+id/headlinesFragment"
+        android:name="com.samples.hiltdemosession.feature_news.presentation.ui.headlines.HeadlinesFragment"
+        android:label="HeadlinesFragment"
+        tools:layout="@layout/headlines_fragment"/>
+    <fragment
+        android:id="@+id/favouritesFragment"
+        android:name="com.samples.hiltdemosession.feature_news_favourite.presentation.ui.favourites.FavouritesFragment"
+        android:label="FavouritesFragment"
+        tools:layout="@layout/favourites_fragment"/>
+</navigation>
