@@ -1,8 +1,11 @@
-package com.samples.hiltdemosession
+package com.samples.hiltdemosession.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.samples.hiltdemosession.R
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

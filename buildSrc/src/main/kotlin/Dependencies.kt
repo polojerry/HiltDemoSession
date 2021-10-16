@@ -14,7 +14,7 @@ object Versions {
 
     //AndroidX
     const val navigation = "2.3.5"
-    const val lifecycle = "2.4.0-alpha03"
+    const val lifecycle = "2.4.0-alpha01"
 
     //Coroutines
     const val coroutines = "1.3.9"
@@ -37,6 +37,13 @@ object Versions {
     //Retrofit && OkHttp
     const val retrofit = "2.9.0"
     const val loggingInterceptor = "4.9.0"
+
+    //Glide
+    const val glide =  "4.11.0"
+    const val glideOkHttp = "4.4.0"
+
+    //DropCap
+    const val dropCap = "1.1.0"
 
     //Version codes for all the test libraries
     const val junit4 = "4.13.1"
@@ -90,7 +97,6 @@ object Libraries {
     const val coroutinesPlayServices = "org.jetbrains.kotlinx:kotlinx-coroutines-play-services:${Versions.coroutines}"
 
     //ViewModel, LiveData
-    const val liveDataKtx = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle}"
     const val viewModelKtx = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
     const val kaptLifecycle = "androidx.lifecycle:lifecycle-compiler:${Versions.lifecycle}"
     const val lifecycleRuntime = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycle}"
@@ -114,11 +120,19 @@ object Libraries {
 
     //Retrofit
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
-    const val moshi = "com.squareup.retrofit2:converter-moshi:${Versions.retrofit}"
+    const val gson = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
     const val loggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.loggingInterceptor}"
 
     //Coil
     const val coil = "io.coil-kt:coil:${Versions.coil}"
+
+    //Glide
+    const val glide = "com.github.bumptech.glide:glide:${Versions.glide}"
+    const val glideKapt = "com.github.bumptech.glide:compiler:${Versions.glide}"
+    const val glideOkHttp = "com.github.bumptech.glide:okhttp3-integration:${Versions.glideOkHttp}"
+
+    //DropCap
+    const val dropCap  = "com.novoda:drop-cap:${Versions.dropCap}"
 }
 
 object TestLibraries {
@@ -144,4 +158,7 @@ object AndroidSdk {
     const val targetSdkVersion = compileSdkVersion
     const val versionCode = 1
     const val versionName = "1.0"
+}
+
+object BuildModules {
 }

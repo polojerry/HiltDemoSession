@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_main.xml"
+    app:startDestination="@id/bottomNavigationFragment">
+
+    <fragment
+        android:id="@+id/bottomNavigationFragment"
+        android:name="com.samples.hiltdemosession.ui.bottomNavigation.BottomNavigationFragment"
+        android:label="bottom_navigation_fragment"
+        tools:layout="@layout/bottom_navigation_fragment" >
+        <action
+            android:id="@+id/action_bottomNavigationFragment_to_newsDetailsFragment"
+            app:destination="@id/newsDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsDetailsFragment"
+        android:name="com.samples.hiltdemosession.feature_news.presentation.ui.newsDetails.NewsDetailsFragment"
+        android:label="NewsDetailsFragment"
+        tools:layout="@layout/news_details_fragment">
+        <argument
+            android:name="news"
+            app:argType="com.samples.hiltdemosession.feature_news.presentation.models.NewsPresenter" />
+    </fragment>
+</navigation>
