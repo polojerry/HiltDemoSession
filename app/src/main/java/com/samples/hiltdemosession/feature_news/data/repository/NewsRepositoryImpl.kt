@@ -2,9 +2,9 @@ package com.samples.hiltdemosession.feature_news.data.repository
 
 import com.samples.hiltdemosession.feature_news.data.datasource.remote.api.NewsApi
 import com.samples.hiltdemosession.feature_news.data.datasource.remote.mappers.toDomain
-import com.samples.hiltdemosession.feature_news.domain.model.News
-import com.samples.hiltdemosession.feature_news.domain.repository.NewsRepository
-import com.samples.hiltdemosession.util.Resource
+import com.samples.domain.model.News
+import com.samples.domain.model.Resource
+import com.samples.domain.repository.NewsRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import java.io.IOException

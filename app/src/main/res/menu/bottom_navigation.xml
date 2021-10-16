@@ -2,8 +2,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item android:id="@+id/action_headlines"
-        android:title="Headlines"
+    <item android:id="@+id/headlinesFragment"
+        android:title="@string/headlines"
         android:icon="@drawable/ic_feed"/>
+
+    <item android:id="@+id/favouritesFragment"
+        android:title="@string/favourites"
+        android:icon="@drawable/ic_favorite"/>
 
 </menu>

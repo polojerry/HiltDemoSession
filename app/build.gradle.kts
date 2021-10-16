@@ -56,6 +56,9 @@ android {
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
 
+    implementation(project(BuildModules.domainModule))
+    implementation(project(BuildModules.localModule))
+
     //Kotlin
     implementation(Libraries.kotlinStandardLibrary)
     implementation(Libraries.ktxCore)
@@ -72,6 +75,10 @@ dependencies {
 
     //Hilt
     implementation(Libraries.hilt)
+    implementation("com.google.ar:core:1.23.0")
+    implementation("androidx.legacy:legacy-support-v4:1.0.0")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.3.1")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1")
     kapt(Libraries.hiltKapt)
 
     //Coil
@@ -104,6 +111,9 @@ dependencies {
     }
     kapt(Libraries.glideKapt)
 
+    //room
+    kapt(Libraries.roomKapt)
+
     //DropCap
     implementation(Libraries.dropCap)
 
@@ -112,6 +122,7 @@ dependencies {
     testImplementation(TestLibraries.extJunit)
     testImplementation(TestLibraries.mockWebServer)
     testImplementation(TestLibraries.truth)
+    testImplementation(TestLibraries.roboelectric)
 
     //Android Test
     androidTestImplementation(TestLibraries.espresso)

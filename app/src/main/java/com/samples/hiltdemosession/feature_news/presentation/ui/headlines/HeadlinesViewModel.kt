@@ -1,12 +1,11 @@
 package com.samples.hiltdemosession.feature_news.presentation.ui.headlines
 
-import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.samples.hiltdemosession.feature_news.domain.usecase.FetchHeadlinesUseCase
+import com.samples.domain.model.Resource
+import com.samples.domain.usecase.FetchHeadlinesUseCase
 import com.samples.hiltdemosession.feature_news.presentation.mappers.toPresentation
 import com.samples.hiltdemosession.feature_news.presentation.models.NewsPresenter
-import com.samples.hiltdemosession.util.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
