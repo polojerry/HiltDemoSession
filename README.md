@@ -6,6 +6,10 @@ A app to demonstrate how to use dependency injection in android using [Hilt](htt
 * Language: Kotlin
 * Build System: Gradle
 
+## Demo
+|<img src= "demo/screen_shot_1.png" width = "300" height = "600">
+|<img src= "demo/screen_shot_2.png" width = "300" height = "600">
+|<img src= "demo/screen_shot_3.png" width = "300" height = "600">
 
 ## Libraries
 * [Android Jetpack](https://developer.android.com/jetpack)
